@@ -10,7 +10,13 @@ import { AppLayoutModule } from '../layout/app.layout.module';
 import { TableModule } from 'primeng/table';
 import {DialogModule} from 'primeng/dialog';
 import {ButtonModule} from 'primeng/button';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {InputTextModule} from 'primeng/inputtext';
+import {InputTextareaModule} from 'primeng/inputtextarea';
+import {ConfirmDialogModule} from 'primeng/confirmdialog';
+
+import {ToastModule} from 'primeng/toast';
+
 
 @NgModule({
   declarations: [
@@ -22,11 +28,16 @@ import { FormsModule } from '@angular/forms';
     AdminRoutingModule,
     HttpClientModule,
     CoreModule,
+    ReactiveFormsModule,
     // FormsModule,
     // AppLayoutModule,
     TableModule,
     DialogModule,
-    ButtonModule
+    ButtonModule,
+    InputTextModule,
+    InputTextareaModule,
+    ConfirmDialogModule,
+    ToastModule
   ]
 })
 export class AdminModule { }
