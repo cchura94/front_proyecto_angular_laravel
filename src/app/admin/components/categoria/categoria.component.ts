@@ -14,10 +14,12 @@ export class CategoriaComponent implements OnInit {
   categorias: any[] = []
   display: boolean = false;
   displayModal: boolean = false;
+  displayModalMostrar: boolean = false;
   categoria: any;
   submitted: boolean = true;
   errores: any;
   categoria_id: number=-1;
+  categoria_con_productos: any;
 
   categoriaForm = new FormGroup({
     nombre: new FormControl('', [Validators.required]),
@@ -93,6 +95,20 @@ export class CategoriaComponent implements OnInit {
     this.categoria_id = cat.id
     this.displayModal = true;
     this.initFormCategoria(cat)
+
+  }
+  
+  mostrarModalCategoria(cat: any){
+    this.displayModalMostrar = true;
+
+    this.categoriaService.showCategoria(cat.id).subscribe(
+      (res: any) => {
+        this.categoria_con_productos = res
+      },
+      (error: any) => {
+        console.log(error);
+      }
+    );   
 
   }
   deleteModalCategoria(cat: any){
