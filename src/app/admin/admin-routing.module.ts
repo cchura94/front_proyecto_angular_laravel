@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppLayoutComponent } from '../layout/app.layout.component';
 import { CategoriaComponent } from './components/categoria/categoria.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
+import { ProductoComponent } from './components/producto/producto.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
       {
         path: 'categoria',
         component: CategoriaComponent
+      },
+      {
+        path: 'producto',
+        component: ProductoComponent
       },
       { path: '', loadChildren: () => import('../demo/components/dashboard/dashboard.module').then(m => m.DashboardModule) },
       { path: 'uikit', loadChildren: () => import('../demo/components/uikit/uikit.module').then(m => m.UikitModule) },

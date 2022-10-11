@@ -16,12 +16,16 @@ import {InputTextareaModule} from 'primeng/inputtextarea';
 import {ConfirmDialogModule} from 'primeng/confirmdialog';
 
 import {ToastModule} from 'primeng/toast';
-
+import { ProductoComponent } from './components/producto/producto.component';
+import {ToolbarModule} from 'primeng/toolbar';
+import {RadioButtonModule} from 'primeng/radiobutton';
+import {InputNumberModule} from 'primeng/inputnumber';
 
 @NgModule({
   declarations: [
     PerfilComponent,
-    CategoriaComponent
+    CategoriaComponent,
+    ProductoComponent
   ],
   imports: [
     CommonModule,
@@ -37,7 +41,10 @@ import {ToastModule} from 'primeng/toast';
     InputTextModule,
     InputTextareaModule,
     ConfirmDialogModule,
-    ToastModule
+    ToastModule,
+    ToolbarModule,
+    RadioButtonModule,
+    InputNumberModule
   ]
 })
 export class AdminModule { }
